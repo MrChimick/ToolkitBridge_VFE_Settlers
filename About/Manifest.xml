@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+    <identifier>ToolkitBridge_VFE_Settlers</identifier>
+    <version>0.1.0.0</version>
+    <dependencies>
+        <li>TwitchToolkit</li>
+        <li>VanillaFactionsExpandedSettlers</li>
+    </dependencies>
+    <manifestUri>https://github.com/MrChimick/ToolkitBridge_VFE_Settlers/raw/master/About/Manifest.xml</manifestUri>
+    <downloadUri>https://github.com/MrChimick/ToolkitBridge_VFE_Settlers/releases/latest</downloadUri>
+</Manifest>
