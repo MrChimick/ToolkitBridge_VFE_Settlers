@@ -61,7 +61,6 @@
         <Compile Include="Workers\IncidentBridge_Wanted.cs" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="About\Manifest.xml" />
       <Content Include="Defs\IncidentDefs.xml" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
