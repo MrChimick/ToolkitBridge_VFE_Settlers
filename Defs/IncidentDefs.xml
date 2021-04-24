@@ -4,7 +4,7 @@
         <defName>DrunkMuffalos</defName>
         <label>Drunk muffalos</label>
         <abbreviation>drunkmuffalos</abbreviation>
-        <cost>1000</cost>
+        <cost>500</cost>
         <eventCap>5</eventCap>
         <incidentHelper>ToolkitBridge_VFE_Settlers.IncidentBridge_DrunkMuffalos</incidentHelper>
         <karmaType>Neutral</karmaType>
@@ -14,8 +14,8 @@
         <defName>ProtectionFee</defName>
         <label>Protection fee demand</label>
         <abbreviation>protectionfee</abbreviation>
-        <cost>1000</cost>
-        <eventCap>5</eventCap>
+        <cost>2000</cost>
+        <eventCap>2</eventCap>
         <incidentHelper>ToolkitBridge_VFE_Settlers.IncidentBridge_ProtectionFee</incidentHelper>
         <karmaType>Bad</karmaType>
     </TwitchToolkit.Incidents.StoreIncidentSimple>
@@ -24,7 +24,7 @@
         <defName>Settlers_CaravanRaid</defName>
         <label>raid caravan</label>
         <abbreviation>caravanraidquest</abbreviation>
-        <cost>1000</cost>
+        <cost>1500</cost>
         <eventCap>2</eventCap>
         <incidentHelper>ToolkitBridge_VFE_Settlers.IncidentBridge_CaravanRaid</incidentHelper>
         <karmaType>Neutral</karmaType>
@@ -34,7 +34,7 @@
         <defName>Settlers_Wanted</defName>
         <label>wanted</label>
         <abbreviation>wantedquest</abbreviation>
-        <cost>1000</cost>
+        <cost>1500</cost>
         <eventCap>2</eventCap>
         <incidentHelper>ToolkitBridge_VFE_Settlers.IncidentBridge_Wanted</incidentHelper>
         <karmaType>Neutral</karmaType>

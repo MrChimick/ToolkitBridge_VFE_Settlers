@@ -1,6 +1,6 @@
 ﻿using RimWorld;
-using Verse;
 using TwitchToolkit.Store;
+using Verse;
 
 namespace ToolkitBridge_VFE_Settlers
 {
@@ -12,16 +12,16 @@ namespace ToolkitBridge_VFE_Settlers
 
         public override bool IsPossible()
         {
-            this.worker = (IncidentWorker) new IncidentWorker_GiveQuest();
-            this.worker.def = IncidentDef.Named("GiveQuest_CaravanRaid");
-            this.worker.def.questScriptDef = DefDatabase<QuestScriptDef>.GetNamed("VFES_CaravanRaid");
-            this.parms = new IncidentParms();
-            this.parms.questScriptDef = DefDatabase<QuestScriptDef>.GetNamed("VFES_CaravanRaid");
-            this.parms.points = StorytellerUtility.DefaultThreatPointsNow(Current.Game.RandomPlayerHomeMap);
-            this.parms.forced = true;
-            return (this.worker.CanFireNow(this.parms, false));
+            worker = new IncidentWorker_GiveQuest();
+            worker.def = IncidentDef.Named("GiveQuest_CaravanRaid");
+            worker.def.questScriptDef = DefDatabase<QuestScriptDef>.GetNamed("VFES_CaravanRaid");
+            parms = new IncidentParms();
+            parms.questScriptDef = DefDatabase<QuestScriptDef>.GetNamed("VFES_CaravanRaid");
+            parms.points = StorytellerUtility.DefaultThreatPointsNow(Current.Game.RandomPlayerHomeMap);
+            parms.forced = true;
+            return (worker.CanFireNow(parms));
         }
 
-        public override void TryExecute() => this.worker.TryExecute(this.parms);
+        public override void TryExecute() => worker.TryExecute(parms);
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<packageId>MrChimick.ToolkitBridge_VFE_Settlers</packageId>
+	<packageId>MrChimick.ToolkitBridge.VFE.Settlers</packageId>
 	<name>Toolkit Bridge - VFE Settlers</name>
 	<author>mr_chimick</author>
 	<supportedVersions>

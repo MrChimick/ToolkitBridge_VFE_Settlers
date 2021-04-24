@@ -1,8 +1,8 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using RimWorld;
+using TwitchToolkit.Store;
 using Verse;
 using VFE_Settlers.Workers;
-using TwitchToolkit.Store;
 
 namespace ToolkitBridge_VFE_Settlers
 {
@@ -14,26 +14,14 @@ namespace ToolkitBridge_VFE_Settlers
 
         public override bool IsPossible()
         {
-            this.worker = (IncidentWorker) new IncidentWorker_DrunkMuffalos();
-            this.worker.def = IncidentDef.Named("DrunkMuffalos");
-            this.parms = new IncidentParms();
-            List<Map> maps = Current.Game.Maps;
-            ((IList<Map>) maps).Shuffle<Map>();
-            using (List<Map>.Enumerator enumerator = maps.GetEnumerator())
-            {
-                while (enumerator.MoveNext())
-                {
-                    this.parms.target = enumerator.Current;
-                    if (this.worker.CanFireNow(this.parms, false))
-                    {
-                        this.parms.points = StorytellerUtility.DefaultThreatPointsNow(this.parms.target);
-                        return true;
-                    }
-                }
-            }
-            return false;
+            worker = new IncidentWorker_DrunkMuffalos();
+            worker.def = IncidentDef.Named("DrunkMuffalos");
+            parms = new IncidentParms();
+            parms.target = Current.Game.RandomPlayerHomeMap;
+            parms.points = StorytellerUtility.DefaultThreatPointsNow(parms.target);
+            return (worker.CanFireNow(parms));
         }
 
-        public override void TryExecute() => this.worker.TryExecute(this.parms);
+        public override void TryExecute() => worker.TryExecute(parms);
     }
 }
